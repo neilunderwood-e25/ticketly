@@ -1,0 +1,25 @@
+{
+    "mcpServers": {
+        "supabase": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@supabase/mcp-server-supabase@latest",
+                "--access-token",
+                "sbp_1843424473781df8554351924026b3f8db3f2cff",
+                "--project-ref",
+                "srsawiniwmreovbbgyrj"
+            ]
+        },
+        "shadcn": {
+            "command": "npx",
+            "args": [
+                "shadcn@latest",
+                "mcp"
+            ]
+        },
+        "clerk": {
+            "url": "https://mcp.clerk.com/mcp"
+        }
+    }
+}
