@@ -29,7 +29,7 @@ export function CurrentTime() {
   }, []);
 
   return (
-    <span className="text-sm font-medium text-gray-600 dark:text-gray-400 pt-1">
+    <span className="text-sm font-medium text-gray-700 dark:text-gray-200 pt-1">
       {time}
     </span>
   );

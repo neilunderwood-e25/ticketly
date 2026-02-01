@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Inter } from "next/font/google";
+import Header from "./components/header/header";
 import "./globals.css";
 
 const inter = Inter({
@@ -29,7 +30,10 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="min-h-screen w-full relative">{children}</div>
+            <div className="min-h-screen w-full relative max-w-[1800px] mx-auto px-4">
+              <Header />
+              {children}
+            </div>
           </ThemeProvider>
         </body>
       </html>
