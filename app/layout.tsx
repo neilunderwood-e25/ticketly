@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -20,13 +21,16 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body
-          className={`${inter.variable} font-sans antialiased`}
-        >
-          <div className="min-h-screen w-full relative">
-            {children}
-          </div>
+      <html lang="en" suppressHydrationWarning>
+        <body className={`${inter.variable} font-sans antialiased`}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className="min-h-screen w-full relative">{children}</div>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
